@@ -1,19 +1,10 @@
 using System;
 
-// Condicional IF-ELSE
+// IF Aninhado
 class Aula12
 {
     static void Main()
     {
-        //SE(E_L){
-        //
-        // }
-        // E_L = Expressão Lógica
-
-        //10 < 5 = false;
-        //10 > 5 = true;
-
-        // > < >= <= == !=
         int n1, n2, n3, n4, res;
         res = n1 = n2 = n3 = n4 = 0;
         string resultado;
@@ -32,18 +23,42 @@ class Aula12
 
         res = n1 + n2 + n3 + n4;
 
-        if (res < 40)
+        if (res >= 60)
         {
-            resultado = "Reprovado";
-        }
-        else if (res < 60)
-        {
-            resultado = "Recuperação";
+            if (res >= 90)
+            {
+                if (res >= 99)
+                {
+
+                    resultado = "Aprovado com super louvor";
+                }
+                else
+                {
+
+                    resultado = "Aprovado com louvor";
+                }
+
+            }
+            else
+            {
+                resultado = "Aprovado";
+
+            }
         }
         else
         {
-            resultado = "Aprovado";
+            if (res >= 40)
+            {
+                resultado = "Recuperação";
+
+            }
+            else
+            {
+                resultado = "Reprovado";
+
+            }
         }
+
 
         Console.WriteLine("Nota {0} - Resultado: {1}", res, resultado);
     }
